@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Risk Assessment: Concussion & Muscle Strain Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 3em auto; max-width: 700px; }
+    h1 { color: #1976D2; }
+    fieldset { margin-bottom: 2em; border-radius: 8px; border: 1px solid #bbdefb; padding: 1em; }
+    legend { font-weight: bold; }
+    input, select, textarea { margin-bottom: 10px; }
+    .submit { background: #1976D2; color: white; padding: 0.5em 1em; border-radius: 4px; cursor: pointer; border: none; }
+  </style>
+</head>
+<body>
+  <h1>🏥 Health Risk Assessment: Concussion & Muscle Strain Survey</h1>
+  <form method="POST" action="https://formspree.io/f/mayourformid">
+    <fieldset>
+      <legend>General Health & Lifestyle</legend>
+      <label>Mental Health Status:</label><br>
+      <select name="mental_health">
+        <option>Excellent</option><option>Good</option>
+        <option>Fair</option><option>Poor</option>
+      </select><br>
+
+      <label>Age (years):</label><br>
+      <input type="number" name="age"><br>
+
+      <label>Gender:</label><br>
+      <select name="gender">
+        <option>Male</option><option>Female</option>
+        <option>Non-binary</option><option>Prefer not to say</option>
+      </select><br>
+
+      <label>Race/Ethnicity:</label><br>
+      <select name="race_ethnicity">
+        <option>Asian</option><option>Black/African American</option>
+        <option>Hispanic/Latino</option><option>White/Caucasian</option>
+        <option>Other</option>
+      </select><br>
+      <input type="text" name="race_ethnicity_other" placeholder="Other, please specify"><br>
+
+      <label>Height (inches):</label><br>
+      <input type="number" name="height_inches"><br>
+      <label>Weight (lbs):</label><br>
+      <input type="number" name="weight_lbs"><br>
+      <label>Average Sleep per Night (hours):</label><br>
+      <input type="number" name="sleep_hrs"><br>
+      <label>Average Daily Screen Time (hours):</label><br>
+      <input type="number" name="screen_hrs"><br>
+      <label>Diet Type:</label><br>
+      <select name="diet_type">
+        <option>Vegan</option><option>Vegetarian</option>
+        <option>Omnivore</option><option>Paleo</option><option>Pescatarian</option>
+        <option>Other</option>
+      </select><br>
+      <input type="text" name="diet_type_other" placeholder="Other, please specify"><br>
+      <label>Average Daily Caloric Intake:</label><br>
+      <input type="number" name="caloric_intake"><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Musculoskeletal & Injury History</legend>
+      <label>Left Leg Balance Time (seconds):</label><br>
+      <input type="number" name="left_leg_balance"><br>
+      <label>Right Leg Balance Time (seconds):</label><br>
+      <input type="number" name="right_leg_balance"><br>
+      <label>Previous Concussion History:</label><br>
+      <select name="concussion_history">
+        <option>None</option><option>One mild (5+ years ago)</option>
+        <option>Multiple concussions</option><option>Other</option>
+      </select><br>
+      <input type="text" name="concussion_history_other" placeholder="Other, please specify"><br>
+      <label>Significant Previous Injury (body part & type):</label><br>
+      <input type="text" name="previous_injury"><br>
+      <label>Maximum Weight Lifted (lbs):</label><br>
+      <input type="number" name="max_weight"><br>
+      <label>Anabolic Steroid Use:</label>
+      <select name="steroid_use"><option>No</option><option>Yes</option></select><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Activity & Genetics</legend>
+      <label>Primary Sport/Activity:</label><br>
+      <input type="text" name="primary_activity"><br>
+      <label>Level of Competition:</label>
+      <select name="competition_level">
+        <option>Recreational</option><option>High School</option>
+        <option>Collegiate</option><option>Professional</option>
+      </select><br>
+      <label>Known Benign Genetic Conditions:</label><br>
+      <input type="text" name="benign_conditions"><br>
+      <label>Known Harmful Genetic Conditions:</label><br>
+      <input type="text" name="harmful_conditions"><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Consent</legend>
+      <label>
+        <input type="checkbox" name="consent" required>
+        I confirm all answers are accurate and understand this is a risk prediction, not official medical advice.
+      </label>
+    </fieldset>
+    <button class="submit" type="submit">Submit</button>
+  </form>
+  <p style="color: #666; font-size:0.9em;">
+    The information provided will be used for risk analysis and recommendations, not for diagnostic or medical purposes.
+  </p>
+</body>
+</html>
